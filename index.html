@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estadística en Acción</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+
+    body {
+      background: linear-gradient(135deg, #aeedf6, #cbcac7);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      color: rgb(255, 244, 244);
+      padding: 25px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #bcbcbc;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff9500;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgb(195, 195, 195);
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgb(12, 80, 99);
+    }
+
+    h2 {
+      text-align: center;
+      color: #000000;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Tarjetas de conceptos */
+    .conceptos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .tarjeta {
+      background: #fefefe;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.1rem;
+      border: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .tarjeta:hover {
+      transform: scale(1.05);
+      background: #636363;
+    }
+
+    .tarjeta h3 {
+      color: #6ed8ce;
+      margin-bottom: 10px;
+    }
+
+    /* Galería */
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .galeria a {
+      display: block;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgb(0, 0, 0);
+      transition: transform 0.3s;
+    }
+
+    .galeria a:hover {
+      transform: rotate(-2deg) scale(1.05);
+    }
+
+    .galeria img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.8);
+      color: rgb(164, 245, 252);
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 1rem;
+    }
+
+    footer span {
+      color: #ffde59;
+      font-weight: bold;
+    }
+
+    /* 📱 Responsive para celulares */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 8px;
+        font-size: 1rem;
+      }
+
+      section {
+        margin: 20px 10px;
+        padding: 15px;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .galeria img {
+        height: 160px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 5px 0;
+      }
+
+      .galeria img {
+        height: 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📊 Estadística en Acción</h1>
+    <nav>
+      <a href="#intro">Inicio</a>
+      <a href="#conceptos">Conceptos</a>
+      <a href="#galeria">Galería</a>
+    </nav>
+  </header>
+
+  <section id="intro">
+    <h2>¿Qué es la Estadística?</h2>
+    <p>
+      La estadística es la rama de las matemáticas que se ocupa de recopilar, organizar, analizar e interpretar datos numéricos
+       para obtener conclusiones y tomar decisiones. Se utiliza para describir características
+        de una población o muestra, encontrar patrones, hacer predicciones y comprender fenómenos complejos
+    </p>
+  </section>
+
+  <section id="conceptos">
+    <h2>Conceptos Clave</h2>
+    <div class="conceptos">
+      <div class="tarjeta">
+        <h3>Media</h3>
+        <p>promedio o media(X̄)=se obtiene como el cociente entre la suma de todos los datos y la cantidad de todos los datos.</p>
+      </div>
+      <div class="tarjeta">
+        <h3>Mediana</h3>
+        <p>(ME)=valor que ocupa el lugar central al ordenar los datos de menor a mayor.</p>
+      </div>
+      <div class="tarjeta">
+        <h3>Moda</h3>
+        <p>(MO)=es el valor que tiene mayor frecuencia. puede suceder que no haya moda, o que exista mas de una.</p>
+      </div>
+      <div class="tarjeta">
+        <h3>Gráficos</h3>
+        <p>para representar variables cualitativas o cualitativas o cuantitativas discreta, se utilizan los graficos 
+          de barras y los circulares. los graficos de barras muestran las frecuencias absolutas de los diferentes valores 
+          de la variables y los graficos circulres, los porcentajes de cada valor.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria">
+    <h2>Galería de Ejemplos</h2>
+    <p>Aca se encuentran mis trabajos realizados en las clases de matematicas. 👇</p>
+    <div class="galeria">
+      <a href="1.png" target="_blank"><img src="1.png" alt="Ejemplo 1"></a>
+      <a href="(2).PNG" target="_blank"><img src="(2).PNG" alt="Ejemplo 2"></a>
+      
+    </div>
+  </section>
+
+  <footer>
+    <p>Hecho por Emmanuel Rossi estudiante de la <span>EPS</span> 💡 | Proyecto de Informatica Articulado con Matemáticas</p>
+  </footer>
+</body>
+</html>
