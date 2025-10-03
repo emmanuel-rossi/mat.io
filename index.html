@@ -123,6 +123,26 @@
       height: 200px;
       object-fit: cover;
     }
+    .video-container{
+      position: relative;
+      padding-bottom: 56.25%;
+      height:0;
+      overflow: hidden;
+      max-width: 100%;
+      background: #000;
+      border-radius: 10px;
+    }
+    .video-container iframe{
+     position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      heigth: 100%;
+      border-radius: 10px;  
+    }
+
+
+    
 
     footer {
       background: rgba(0, 0, 0, 0.8);
@@ -137,6 +157,7 @@
       color: #ffde59;
       font-weight: bold;
     }
+    
 
     /* 📱 Responsive para celulares */
     @media (max-width: 768px) {
@@ -238,6 +259,13 @@
     <div class="galeria">
       <a href="1.png" target="_blank"><img src="1.png" alt="Ejemplo 1"></a>
       <a href="(2).PNG" target="_blank"><img src="(2).PNG" alt="Ejemplo 2"></a>
+      
+    </div>
+  </section>
+  <section id="video">
+  <h2>Video sobre Estadistica</h2>
+    <div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0_ybaigJd1s?si=8_TEWt2CMNmDgaZS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       
     </div>
   </section>
